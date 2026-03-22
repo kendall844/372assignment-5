@@ -1,3 +1,8 @@
+/*This is the JavaScript file for the fetch API. This adds all function to the HTML page along with appending 
+to the HTML. It handles errors and uses async functions along with fetch and await. 
+*/
+
+
 const gallery = document.getElementById("gallery");
 const searchBtn = document.getElementById("searchBtn");
 const enterUser = document.getElementById("username");
@@ -21,7 +26,6 @@ function clearGallery() {
 
 async function fetchRepos(username) {
     clearGallery();
-    gallery.textContent = "Loading...";
 
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`);
