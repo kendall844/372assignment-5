@@ -48,5 +48,44 @@ async function fetchRepos(username) {
     }
 }
 
+function createRepoCard(repo, languages){
+const div = document.createElement("div");
+div.classList.add("repo");
+
+const title = document.createElement("h3");
+title.textContent = repo.name;
+
+const descript = document.createElement("p");
+descript.textContent = repo.description || "Description not provided";
+
+const created = document.createElement("p");
+created.textContent = "Created: " + formatDate(repo.created_at);
+
+const updated = document.createElement("p");
+updated.tectContent = "Updated: " + formatDate(repo.updated_at);
+
+const langs = document.createElement("p");
+langs.textContent = "Languages: " + (languages.join(", ") || "No languages");
+
+const watchers = document.createElement("p");
+watchers.textContent = "Watchers: " + repo.watchers_count;
+
+const link = document.createElement("a");
+link.href = repo.html_url;
+link.target = "_blank";
+link.textContent = "View Repo";
+
+div.appendChild(title);
+div.appendChild(descript);
+div.appendChild(created);
+div.appendChild(updated);
+div.appendChild(langs);
+div.appendChild(watchers);
+div.appendChild(link);
+
+return div;
+}
+
+
 
 
