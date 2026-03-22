@@ -1,0 +1,37 @@
+body{
+    font-family: 'Courier New';
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.repo{
+    border: 2px solid black;
+    padding: 10px;
+    width: 250px;
+
+}
+
+.repo a{
+    color: hotpink;
+}
+
+#username{
+    margin: 20px;
+    width: 400px;
+    margin-left: 350px;
+}
+
+#searchBtn{
+    background-color: hotpink;
+    border: 1px solid, rgb(234, 78, 156);
+}
+
